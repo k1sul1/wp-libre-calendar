@@ -1,0 +1,45 @@
+{
+  "name": "wp-libre-calendar-build",
+  "version": "0.0.1",
+  "description": "[![Build Status](https://travis-ci.org/k1sul1/wp-libre-calendar.svg?branch=master)](https://travis-ci.org/k1sul1/wp-libre-calendar)",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-php": "composer install",
+    "build-js": "npm run rollup",
+    "build-css": "npm run stylus && npm run autoprefixer",
+    "build": "npm-run-all -p build-php build-js build-css",
+
+    "watch-js": "onchange src/js/*.js src/js/**/*.js -- npm run build-js",
+    "watch-styl": "onchange src/styl/*.styl src/styl/**/*.styl -- npm run build-css",
+    "watch": "npm-run-all -p watch-js watch-styl",
+
+    "stylus": "stylus --compress --inline --sourcemap --out pub/admin.css src/styl/admin.styl",
+    "rollup": "rollup --sourcemap -c .rollup.config.js --name admin",
+    "autoprefixer": "postcss -u autoprefixer -r pub/admin.css"
+  },
+  "repository": {
+    "url": "git+https://github.com/k1sul1/wp-libre-calendar.git",
+    "type": "git"
+  },
+  "author": "Christian Nikkanen <christian.nikkanen@gmail.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/k1sul1/wp-libre-calendar/issues"
+  },
+  "homepage": "https://github.com/k1sul1/wp-libre-calendar#readme",
+  "dependencies": {
+    "autoprefixer": "^6.5.1",
+    "buble": "^0.14.2",
+    "npm-run-all": "^3.1.1",
+    "onchange": "^3.0.2",
+    "postcss-cli": "^2.6.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-json": "^2.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-npm": "^2.0.0",
+    "stylus": "^0.54.5"
+  }
+}

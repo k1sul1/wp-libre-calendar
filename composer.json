@@ -1,0 +1,13 @@
+{
+    "name": "k1sul1/wp-libre-calendar",
+    "description": "Best calendar plugin for WordPress",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Christian Nikkanen",
+            "email": "christian.nikkanen@gmail.com"
+        }
+    ],
+    "require": {}
+}
