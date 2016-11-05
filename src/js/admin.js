@@ -1,26 +1,13 @@
-function toArray(arrayLike) {
-    return Array.prototype.slice.call(arrayLike);
-}
+import { toArray, clearSiblingInputs } from './helpers.js';
+import { eventDetailMeta } from './event-metabox.js';
 
-function clearSiblingInputs(evt) {
-    var target = evt.currentTarget || evt.target;
-
-    if (!target) {
-        return;
-    }
-
-    evt.preventDefault();
-
-    toArray(target.parentNode.querySelectorAll("input")).
-    forEach(function (input) {
-        input.checked = false;
-    });
-}
-
-toArray(document.querySelectorAll("[data-action=clear]")).
-forEach(function (el) {
-    el.addEventListener("click", clearSiblingInputs);
-    el.classList.remove("cloak");
+toArray(document.querySelectorAll('[data-action=clear]')).forEach(el => {
+  el.addEventListener('click', clearSiblingInputs);
+  el.classList.remove('cloak');
 });
 
-console.log('Admin JS rocks!');
+toArray(document.querySelectorAll('.wplc_event_type')).forEach(check => {
+  check.addEventListener('change', eventDetailMeta);
+});
+
+

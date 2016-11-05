@@ -57,6 +57,7 @@ const BASE_NAME = __FILE__;
 const REQUIRE_CAPS = "manage_options";
 
 // Include settings and actions
+require HOME_DIR . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "class.wp-libre-calendar.php";
 require HOME_DIR . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "settings.php";
 require HOME_DIR . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "admin-actions.php";
 require HOME_DIR . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "actions.php";

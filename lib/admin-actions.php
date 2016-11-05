@@ -6,7 +6,11 @@ use WPLC\Boilerplate\Settings as Settings;
 
 // Add admin actions and handlers here
 
+add_action("plugins_loaded", __NAMESPACE__ . "\\init");
 
+function init() {
+  \WPLC\WP_Libre_Calendar::init();
+}
 
 /* There should be very little need to edit anything below this line */
 add_action("admin_init", __NAMESPACE__ . "\\enqueuePubResources");
