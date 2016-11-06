@@ -14,7 +14,8 @@
     "watch": "npm-run-all -p watch-js watch-styl",
     "stylus": "stylus --compress --inline --sourcemap --out pub/admin.css src/styl/admin.styl",
     "rollup": "rollup --sourcemap -c .rollup.config.js --name admin",
-    "autoprefixer": "postcss -u autoprefixer -r pub/admin.css"
+    "autoprefixer": "postcss -u autoprefixer -r pub/admin.css",
+    "translate": "node ./generate-translations.js"
   },
   "repository": {
     "url": "git+https://github.com/k1sul1/wp-libre-calendar.git",
@@ -29,6 +30,7 @@
   "dependencies": {
     "autoprefixer": "^6.5.1",
     "buble": "^0.14.2",
+    "gettext-parser": "^1.2.0",
     "npm-run-all": "^3.1.1",
     "onchange": "^3.0.2",
     "postcss-cli": "^2.6.0",
