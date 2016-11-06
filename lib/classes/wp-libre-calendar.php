@@ -16,9 +16,12 @@ class WP_Libre_Calendar {
     require_once 'cpt-event.php';
     CPT_Event::init();
 
+    require_once 'db.php';
+    $db = new Database();
+
     add_action('plugins_loaded', array($this, 'load_plugin_textdomain'));
 
-    add_action('after_setup_theme', function() {
+    /*add_action('after_setup_theme', function() {
       // $translations = get_translations_for_domain('wp-libre-calendar');
       // seems like it's impossible to get all strings easily.
       // just read the values from the json.
@@ -40,7 +43,7 @@ class WP_Libre_Calendar {
       <?php
       });
 
-    });
+    });*/
   }
 
   public static function load_plugin_textdomain() {
