@@ -5,6 +5,9 @@ notifications:
   on_success: never
   on_failure: change
 
+node_js:
+  - "6"
+
 php:
   - nightly # PHP 7.1?
   - 7.0
