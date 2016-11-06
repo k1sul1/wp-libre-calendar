@@ -13,8 +13,7 @@ class WP_Libre_Calendar {
   }
 
   private function __construct() {
-    require_once 'class.cpt-event.php';
-
+    require_once 'cpt-event.php';
     CPT_Event::init();
 
     add_action('plugins_loaded', array($this, 'load_plugin_textdomain'));

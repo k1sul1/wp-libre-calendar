@@ -8,6 +8,7 @@ Features:
   - Simultaneous event and reservation based modes
   - Ability to set up closing and opening times, on a per day basis
   - Pluggable
+  - Supports user accounts
   - Should work without issues with multilingual plugins such as Polylang
   - Exporting data is easy, and adding your own export format is easy
 
