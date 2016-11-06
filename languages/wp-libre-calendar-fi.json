@@ -1,0 +1,43 @@
+{
+  "charset": "utf-8",
+  "headers": {
+    "project-id-version": "WP Libre Calendar",
+    "pot-creation-date": "2016-10-26 12:52+0100",
+    "po-revision-date": "2016-10-26 12:53+0100",
+    "last-translator": "Christian Nikkanen <christian.nikkanen@gmail.com>",
+    "language-team": "Christian Nikkanen <christian.nikkanen@gmail.com>",
+    "language": "fi",
+    "mime-version": "1.0",
+    "content-type": "text/plain; charset=UTF-8",
+    "content-transfer-encoding": "8bit",
+    "plural-forms": "nplurals=2; plural=(n != 1);",
+    "x-generator": "Poedit 1.8.8",
+    "x-poedit-basepath": "..",
+    "x-poedit-wpheader": "index.php",
+    "x-poedit-sourcecharset": "UTF-8",
+    "x-poedit-keywordslist": "__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2",
+    "x-poedit-searchpath-0": ".",
+    "x-poedit-searchpathexcluded-0": "*.js"
+  },
+  "translations": {
+    "": {
+      "": {
+        "msgid": "",
+        "msgstr": [
+          ""
+        ]
+      },
+
+      "Select date": {
+        "msgid": "Select date",
+        "comments": {
+          "reference": "some/file:21"
+        },
+        "msgstr": [
+          "Valitse päivä"
+        ]
+      }
+
+    }
+  }
+}

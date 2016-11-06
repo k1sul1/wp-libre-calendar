@@ -6,7 +6,10 @@ use WPLC\Boilerplate\Settings as Settings;
 
 // Add admin actions and handlers here
 
-add_action("plugins_loaded", __NAMESPACE__ . "\\init");
+// Run a bit earlier than default. This allows us to run most of our plugins_loaded hooks without priority parameter.
+// (without this any add_action('plugins_loaded', function(){}) wouldn't work).
+
+add_action("plugins_loaded", __NAMESPACE__ . "\\init", 9);
 
 function init() {
   \WPLC\WP_Libre_Calendar::init();

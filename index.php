@@ -4,6 +4,8 @@
  * Description: Calebdar for WordPress. Event and reservation based functionalities.
  * Author: Christian Nikkanen, @k1sul1
  * Version: 0.0.1
+ * Text Domain: wp-libre-calendar
+ * Domain Path: /languages
  */
 
 /**
