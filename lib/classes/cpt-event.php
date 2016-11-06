@@ -118,7 +118,7 @@ class CPT_Event {
       )
     );
 
-    $meta = get_post_meta(89);
+    $meta = get_post_meta(get_the_ID());
     foreach ($meta as $key => $value) {
       $client_data["post"]["meta"][$key] = $value;
     }
