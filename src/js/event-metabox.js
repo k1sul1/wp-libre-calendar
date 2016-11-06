@@ -1,5 +1,7 @@
 import { el, mount, unmount } from 'redom';
 import { toArray } from './helpers.js';
+import Pikaday from 'pikaday';
+
 
 const elements = {};
 export function renderMetaboxFields(event) {
@@ -18,22 +20,25 @@ export function renderMetaboxFields(event) {
   const eventFn = () => {
     toArray(container.children).forEach(destroy);
 
+    const startTimeInput = el(
+      'input',
+      {
+        type: 'text',
+        name: 'wplc_event_start_time',
+        class: 'datepicker',
+        placeholder: wplc.localization['Select date'],
+        value: wplc.post.meta['wplc_event_start_time'] || ''
+      }
+    );
+    const picker = new Pikaday({ field: startTimeInput });
+
     return elements[type] || el(
       'div',
       { type: 'event' },
       el(
         'label',
         { class: 'wplc_event_start_time' },
-        el(
-          'input',
-          {
-            type: 'text',
-            name: 'wplc_event_start_time',
-            class: 'datepicker',
-            placeholder: wplc.localization['Select date'],
-            value: wplc.post.meta['wplc_event_start_time'] || ''
-          }
-        )
+        startTimeInput
       )
     );
   };
