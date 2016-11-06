@@ -3,7 +3,7 @@ import { toArray } from './helpers.js';
 
 const elements = {};
 export function renderMetaboxFields(event) {
-  const type = event.target.value;
+  const type = event.value || event.target.value;
   const container = document.querySelector('#wplc_event_details_container');
 
   const destroy = (element) => {
@@ -30,7 +30,8 @@ export function renderMetaboxFields(event) {
             type: 'text',
             name: 'wplc_event_start_time',
             class: 'datepicker',
-            placeholder: wplc.localization['Select date']
+            placeholder: wplc.localization['Select date'],
+            value: wplc.post.meta['wplc_event_start_time'] || ''
           }
         )
       )

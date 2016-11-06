@@ -6,7 +6,10 @@ toArray(document.querySelectorAll('[data-action=clear]')).forEach(el => {
   el.classList.remove('cloak');
 });
 
-toArray(document.querySelectorAll('.wplc_event_type')).forEach(check => {
+toArray(document.querySelectorAll('input[name="wplc_event_type"]')).forEach(check => {
+  if (check.checked) {
+    renderMetaboxFields(check);
+  }
   check.addEventListener('change', renderMetaboxFields);
 });
 
