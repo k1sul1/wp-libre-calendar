@@ -12,6 +12,7 @@ function getSections()
     return array(
         SECTION_DEFAULT => array(
             PROP_TITLE => "Section Title",
+            PROP_ID => 'section-1',
             PROP_DESCRIPTION => "Optional section description"
         )
     );

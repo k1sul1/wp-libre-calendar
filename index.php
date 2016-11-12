@@ -41,13 +41,13 @@ const SETTING_NAME = "wp-libre-calendar";
 const PAGE_NAME = "wplc-settings";
 
 // Settings page title
-const PAGE_TITLE = "WP Libre Calendar Options";
+const PAGE_TITLE = "WP Libre Calendar settings";
 
 // Settings page description
 const PAGE_DESCRIPTION = "Settings for WP Libre Calendar";
 
 // Menu title (in plugins menu)
-const MENU_TITLE = "WP Libre Calendar";
+const MENU_TITLE = "Settings";
 
 // Helper for absolute path references
 const HOME_DIR = __DIR__;

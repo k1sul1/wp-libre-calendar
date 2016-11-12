@@ -50,7 +50,8 @@ function registerSettingsPage()
 {
     $settings = Settings\getSettings();
 
-    add_plugins_page(
+    add_submenu_page(
+        'edit.php?post_type=wplc-event',
         $settings[Settings\S_PAGE_TITLE],
         $settings[Settings\S_MENU_TITLE],
         $settings[Settings\S_REQUIRE_CAPS],
