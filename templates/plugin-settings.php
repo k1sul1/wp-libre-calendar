@@ -1,4 +1,4 @@
-<form action="options.php" method="post">
+<form action="options.php" method="post" id="wplc-settings-form">
     <?php
     if (array_key_exists("page_title", $settings)) {
         printf("<h2>%s</h2>", $settings["page_title"]);

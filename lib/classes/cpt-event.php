@@ -119,8 +119,12 @@ class CPT_Event {
     );
 
     $meta = get_post_meta(get_the_ID());
+    if ($meta) {
     foreach ($meta as $key => $value) {
       $client_data["post"]["meta"][$key] = $value;
+    }
+    } else {
+      $client_data["error"] = "localize() was called in a wrong place!";
     }
 
     wp_localize_script(
