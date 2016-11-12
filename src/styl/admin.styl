@@ -1,5 +1,57 @@
 @import 'pikaday';
 
+.wplc-calendar {
+  border: 1px solid #222
+  max-width: 90%
+
+  .calendar-wrap {
+    overflow: hidden
+  }
+
+  .month {
+    float: left
+    margin: 1rem
+    text-align: center
+    line-height: 2
+  }
+
+  table {
+    vertical-align: top
+    border-collapse: collapse
+  }
+
+  tbody tr:hover {
+    background: #fff
+  }
+
+  td {
+    text-align: center
+    line-height: 1.75rem
+    width: 1.75rem
+
+    &.before, &.after{
+      color: #999
+    }
+  }
+
+  thead td {
+    color: #999
+    font-size: 0.75rem
+    text-transform: uppercase
+  }
+
+  tbody td {
+    font-size: 0.875rem
+
+    &:hover, &.current {
+      background-color: #333
+      color: #fff
+      cursor: pointer
+    }
+  }
+
+}
+
 .textinput {
   width: 400px
 }
